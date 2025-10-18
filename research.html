@@ -4,36 +4,46 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html><head>
-		<title>Chehade Research</title> <!-- This is the title of the website tab -->
+		<title>Sarah Chehade's website</title> <!-- This is the title of the website tab -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="assets/css/main.css">
-	</head>
-	
-	
+		<link rel="stylesheet" href="main.css">
+		<!-- MathJax v3 -->
+			<script>
+			window.MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']],   // allow $...$ or \( ... \)
+				displayMath: [['\\[','\\]'], ['\\begin{equation}','\\end{equation}']]
+			}
+			};
+			</script>
+			<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
+	</head>
 	
 	<body class="">
 
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt=""></span> <!-- research photo-->
+					<span class="image avatar" style="width:180px;height:180px;">
+						<img src="quantum.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+					</span>
 				</header>
 				<nav id="nav">
 					<ul>
                         <!-- go to other pages (no 'scrolly' class) -->
-						<li><a href="index.html">About</a></li>
+						<li><a href="index.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About</a></li>
 
 						<!-- stays on this page -->
-						<li><a href="#two" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Research</a></li>
+						<li><a href="#research" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Research</a></li>
 
 						<!-- go to other pages (no 'scrolly' class) -->
-						<li><a href="quantum_resources.html">Quantum Resources</a></li>
-						<li><a href="professional_involvement.html">Professional Involvement</a></li>
+						<li><a href="quantum_resources.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Quantum Resources</a></li>
+						<li><a href="professional_involvement.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Professional Involvement</a></li>
 
 						<!-- still on this page; fix the anchor to match id="seven" -->
-						<li><a href="#seven" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
+						<li><a href="#contact" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -47,28 +57,134 @@
 
 
 						<!-- One -->
-							<section id="one" class="">
+							<section id="research" class="">
 								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="">
+									<img src="banner.png" alt="">
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>Sarah Chehade</h2>
-										<p>"The heart and soul of good writing is research; you should write not what you know but what you can find out about." -Robert J. Sawyer</p> <!-- make smaller-->	
+										<h3>Research</h3>
+										<p>"If you think you understand quantum mechanics, you don't understand quantum mechanics." - Richard Feynman</p> <!-- make smaller-->	
 									</header>
-									<p>Hello! </p>
+									<p>My research interests combines mathematics and quantum information to build verifiable quantum protocols and practical algorithms for near-term quantum devices. A key theme used throughout is uncovering and exploiting the (algebraic) structures, Cartan decompositions, and invariants to certify quantum behavior and optimize resources.</p>
+									<h1>Non-local games</h1>
+									<p>Non-local games (NLGs) are games between a finite number of players and a referee, where separated players answer questions without communicating. The win rate reveals whether their correlations are genuinely quantum. They're often used to certify entanglement and measurements in a device-independent way. Such an appliation is often called "self-testing," and are used as primitives for verification and cryptographic protocols. Some of the key challenges related to NLGs are scaling to larger games, noise-robusness, and determining which framework properly describes our universise. My work specifically focuses on developing algorithms to play NLGs and embedding a finite number of games into larger spaces, where qubit reductions are possible.</p>
+									<table>
+										<thead>
+											<tr>
+												<th>Summary</th>	
+												<th>Publication</th>
+												<th>Pre-print</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Play NLGs on several hardware platforms</td>
+												<td><a href="https://iopscience.iop.org/article/10.1088/2058-9565/adf1c0/meta">Application-level benchmarking of quantum computers using nonlocal game strategies</a></td>
+												<td><a href="https://arxiv.org/abs/2311.01363">arXiv</a></td>
+											</tr>
+											<tr>
+												<td>Construct a variational quantum algorithm to play a NLG</td>
+												<td>Pending: A Game-Theoretic Quantum Algorithm for Solving Magic Squares</td>
+												<td><a href="https://arxiv.org/abs/2505.13366">arXiv</a></td>
+											</tr>	
+											<tr>
+												<td>Play parallel NLGs and reduce necessary qubits to do so</td>
+												<td>Pending: Commuting Embeddings for Parallel Strategies in Non-local Games</td>
+												<td><a href="https://arxiv.org">arXiv</a></td>
+											</tr>										
+										</tbody>
+									</table>
+									<p> </p>
+									<h1>Trotterization</h1>
+									<p>Trotterization (also known as Lie-Trotter/Suzuki products) is technique used to break down hard operator evolutions like $e^{t(A+B)}$ into products like $(e^{tA/n}e^{tB/n})^n$. The latter is simuable on (most) quantum hardware using native gates. Some of the main challenges are depth-accuracy tradeoffs, sensitivity to non-commutativity, and hardware constraints. My work develops structure-aware trotterization using Jordan products and Jordan algebras, which are commutative (and generally non=associative) operator structures.</p>
+									<table>
+										<thead>
+											<tr>
+												<th>Summary</th>	
+												<th>Publication</th>
+												<th>Pre-print</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Second-order Trotter formula and error estimates in Jordan-Banach algebras</td>
+												<td>Pending: Error Estimates and Higher Order Trotter Product Formulas in Jordan-Banach Algebras</td>
+												<td><a href="https://arxiv.org/abs/2412.20604">arXiv</a></td>
+											</tr>
+											<tr>
+												<td>A “semicoherent” framework linking exact symmetries to ε-approximate quantum processes</td>
+												<td><a href="https://pubs.aip.org/avs/aqs/article-abstract/6/3/033805/3310150/Semicoherent-symmetric-quantum-processes-Theory?redirectedFrom=fulltext">Semicoherent symmetric quantum processes: Theory and applications</a></td>
+												<td><a href="https://arxiv.org/pdf/2403.05470">arXiv</a></td>
+											</tr>	
+											<tr>
+												<td>Prove Suzuki-type approximations and error estimates for exponentiated sums in a JB-algebra setting</td>
+												<td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0024379523003786">Suzuki Type Estimates for Exponentiated Sums and Generalized Lie-Trotter Formulas in JB-Algebras</a></td>
+												<td><a href="https://arxiv.org/abs/2306.13168">arXiv</a></td>
+											</tr>										
+										</tbody>
+									</table>
+									<h1>Expressiveness of quantum circuits</h1>
+									<p>Quantum expressiveness quantifies how well a parameterized quantum model (circuit) can span the set of quantum states (unitaries). This is often done by using frame potentials, where values using the Haar measure indicate broader coverage of state (unitary) space. Some key challenges related to quantum expressiveness are that frame potentials are too expensive to estimate and that expressiveness often depends on the circuit architecture, making a uniform theory difficult to develop.</p>
+									<table>
+										<thead>
+											<tr>
+												<th>Summary</th>	
+												<th>Publication</th>
+												<th>Pre-print</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Connecting frame potentials, quantum expectations, and pairwise fidelities to characteristic functions of random variables</td>
+												<td><a href="https://ieeexplore.ieee.org/abstract/document/10738429">Expressiveness of Commutative Quantum Circuits: A Probabilistic Approach</a></td>
+												<td><a href="https://arxiv.org/abs/2404.19727">arXiv</a></td>
+											</tr>
+											<tr>
+												<td>More coming!</td>
+											</tr>									
+										</tbody>
+									</table>
+									<h1>The role of entropy</h1>
+									<p>Quantum entropies quantify uncertainty, correlations, and resources in quantum systems. Making them practical on real devices is tricky due to the nonlinearity of some of the entropic functions. </p>
+									<table>
+										<thead>
+											<tr>
+												<th>Summary</th>	
+												<th>Publication</th>
+												<th>Pre-print</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Outline theoretical security standards for quantum-classical interfaces (connections) </td>
+												<td><a href="https://www.mdpi.com/1099-4300/27/5/517">Entropy of the Quantum–Classical Interface: A Potential Metric for Security</a></td>
+												<td>No pre-print</td>
+											</tr>
+											<tr>
+												<td> A survey of (classical) data compression algorithms in the context of edge computing and emerging quantum compression techniques</td>
+												<td><a href="https://link.springer.com/article/10.1007/s00607-023-01154-0">Classical and quantum compression for edge computing: the ubiquitous data dimensionality reduction</a></td>
+												<td>No pre-print</td>
+											</tr>			
+											<tr>
+												<td>A survey of several entropic measures in quantum information and their core mathematical properties</td>
+												<td><a href="http://www.scholarpedia.org/article/Quantum_entropies">Quantum entropies</a></td>
+												<td>No pre-print</td>
+											</tr>						
+										</tbody>
+									</table>
 								</div>
 							</section>
 
 
 
-							<section id="seven" class="inactive">
+							<section id="contact" class="inactive">
 								<div class="container">
 									<h3>Contact Me</h3>
 									<ul style="list-style-type:none">
 									  <li><b>Email:</b> sarah-chehade at utc dot edu</li>
 									  <li><b>Website last updated:</b> October 2025</li>
-									  <li><b>Social Media:</b> <a href="www.linkedin.com/in/chehade-sarah">LinkedIn</a> </li>
+									  <li><b>Social Media:</b> <a href="https://www.linkedin.com/in/chehade-sarah/">LinkedIn</a> </li>
 									  <li><b>Publications:</b> <a href="https://scholar.google.com/citations?user=eB170XEAAAAJ&hl=en&oi=ao">Google Scholar</a> </li>
 									</ul>
 								</div>
