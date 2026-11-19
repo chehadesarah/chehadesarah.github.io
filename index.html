@@ -1,101 +1,338 @@
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html><head>
-		<title>Sarah Chehade's website</title> <!-- This is the title of the website tab -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="main.css">
-	</head>
-	
-	<body class="">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar" style="width:180px;height:180px;">
-						<img src="me.jpg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-					</span>
-				</header>
-				<nav id="nav">
-					<ul>
-						<!-- stays on this page -->
-						<li><a href="#one" class="scrolly active" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About</a></li>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-						<!-- go to other pages (no 'scrolly' class) -->
-						<li><a href="research.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Research</a></li>
-						<li><a href="quantum_resources.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Quantum Resources</a></li>
-						<li><a href="professional_involvement.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Professional Involvement</a></li>
+    <meta
+        name="description"
+        content="CEDAR Quantum Lab develops mathematical and engineering methods for quantum information, algorithms, dynamics, and verification."
+    >
 
-						<!-- still on this page; fix the anchor to match id="contact" -->
-						<li><a href="#contact" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
-					</ul>
-				</nav>
-			</section>
+    <title>CEDAR Quantum Lab | Sarah Chehade</title>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <link rel="icon" href="assets/img/cedar-mark.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-				<!-- Main -->
-					<div id="main">
+<body>
 
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
 
+    <header class="nav">
+        <div class="wrap nav-inner">
 
-						<!-- One -->
-							<section id="one" class="">
-								<div class="image main" data-position="center">
-									<img src="banner.png" alt="">
-								</div>
-								<div class="container">
-									<header class="major">
-										<h3>Sarah Chehade</h3>
-										<p>“The beauty of mathematics only shows itself to more patient followers.” — Maryam Mirzakhani.</p> 	
-									</header>
-									<p>Hello! My name is Sarah Chehade (pronounced she-ha-de). I am a mathematician at the <a href="https://www.utc.edu/research/quantum-center">University of Tennessee, Chattanooga's Quantum Center</a>. I currently work on problems at the intersection of mathematics, quantum computing, and quantum information theory. Prior to this appointment, I was a postdoctoral research associate at Oak Ridge National Laboratory for 3 years working on similar topics. I obtained my Ph. D. in mathematics from the University of Houston in 2021 focusing on quantum information theory.</p>
-									<p>Away from arXiv or LaTeX, I’m usually chasing my kid or cooking. (If I wasn't a mathematician, I'd be a professional chef.) Sleep is aspirational.</p>
-								</div>
-							</section>
+            <!-- Logo -->
+            <a class="brand" href="index.html">
+                <img
+                    src="assets/img/cedar-mark.svg"
+                    alt="CEDAR Quantum Lab mark"
+                >
 
+                <span>
+                    CEDAR Quantum Lab
+                    <small>
+                        Computation · Engineering · Dynamics · Algorithms · Research
+                    </small>
+                </span>
+            </a>
 
+            <!-- Mobile Navigation -->
+            <button class="toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
 
-							<section id="contact" class="inactive">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍۢ “Indeed, We created all things with precise measure.”— Surah al-Qamar (54:49)</p>
-									<ul style="list-style-type:none">
-									  <li><b>Email:</b> sarah-chehade at utc dot edu</li>
-									  <li><b>Website last updated:</b> October 2025</li>
-									  <li><b>Social Media:</b> <a href="https://www.linkedin.com/in/chehade-sarah/">LinkedIn</a> </li>
-									  <li><b>Publications:</b> <a href="https://scholar.google.com/citations?user=eB170XEAAAAJ&hl=en&oi=ao">Google Scholar</a> </li>
-									</ul>
-								</div>
-							</section>
+            <!-- Navigation Links -->
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a class="active" href="research.html">Research</a>
+                <a href="people.html">People</a>
+                <a href="publications.html" hidden>Publications</a>
+                <a href="service.html" hidden>Outreach</a>
+                <a class="join" href="opportunities.html">Join us</a>
+            </nav>
+
+        </div>
+    </header>
 
 
+    <main>
 
-					</div>
+        <!-- ==========================================
+             HERO SECTION
+        =========================================== -->
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+        <section class="hero">
+            <div class="wrap hero-grid">
 
-			</div>
+                <!-- Hero Text -->
+                <div class="hero-content">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script><div id="titleBar"><a href="#header" class="toggle"></a><span class="title"></span></div>
+                    <div class="eyebrow hero-tagline">
+                        Computation for Engineering, Dynamics, Algorithms &amp; Research in Quantum Systems
+                    </div>
 
-	
-</body></html>
+                    <h1>
+                        CEDAR
+                        <span>Quantum Lab</span>
+                    </h1>
+
+                    <p class="lede">
+                        We use mathematics to uncover structure in quantum
+                        systems inspired by engineering challenges. We turn that structure into algorithms,
+                        verification methods, and engineering tools.
+                    </p>
+
+                    <div class="actions">
+                        <a class="button primary" href="research.html">
+                            Explore our research
+                        </a>
+
+                        <a class="button secondary" href="opportunities.html">
+                            Work with us
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Hero Logo -->
+                <div class="hero-mark">
+                    <img
+                        src="assets/img/cedar-mark.svg"
+                        alt="Graph-inspired CEDAR Quantum Lab emblem"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+        </div>
+
+        <!-- ==========================================
+             THE CEDAR IDEA
+        =========================================== -->
+
+        <section class="dark">
+            <div class="wrap">
+
+                <div class="eyebrow">
+                    The CEDAR idea
+                </div>
+
+                <p class="quote">
+
+                    <span style="white-space: nowrap;">
+                        The lab is built around a simple principle:
+                    </span>
+
+                    <br>
+
+                    <em>
+                        structure is a computational resource.
+                    </em>
+
+                </p>
+
+            </div>
+        </section>
+        <!-- ==========================================
+             RESEARCH PROGRAM
+        =========================================== -->
+
+        <section>
+            <div class="wrap">
+
+                <!-- Section Introduction -->
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        Research program
+                    </div>
+
+                    <h2>
+                        Mathematics that makes quantum systems understandable.
+                    </h2>
+
+                    <p>
+                        CEDAR brings together mathematics, quantum
+                        information, and engineering thinking. Our work asks
+                        a recurring question: what hidden structure in our engineering challenges can make
+                        a quantum problem easier to verify, simulate,
+                        control, or compute?
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             OPPORTUNITIES CALLOUT
+        =========================================== -->
+
+        <section style="padding-top: 0;">
+            <div class="wrap">
+
+                <div class="callout">
+
+                    <strong>Welcome note from Sarah:</strong>
+
+                    <p>
+                        Hello, and welcome to CEDAR Quantum Lab!
+                    </p>
+
+                    <p>
+                        My name is Sarah Chehade (pronounced she-ha-dee) and I am an (incoming) 
+                        faculty member at the University of Houston in the Civil and Environmental Engineering Department. 
+                        I have a Ph. D. in mathematics from the University of Houston. (That is not a typo) 
+                        I love thinking about quantum problems 
+                        from information theory to computing and whatever lies inbetween. 
+                        You might be wondering 'what is a mathematician doing in an engineering department?'
+                    </p>
+
+                    <p>
+                        To me, mathematics and engineering are two sides of the same coin. Mathematics gives us the language 
+                        and tools to understand complex systems, while engineering challenges us to turn that understanding 
+                        into meaningful solutions. Quantum information science and technology needs exactly that!
+                    </p>
+
+                    <p>
+                        What an exciting time to be a scientist!
+                        With the rapid rise of super intelligence,
+                        remarkable advances in quantum technologies,
+                        and a growing ability to explore complex systems,
+                        we are witnessing a truly fascinating era of scientific discovery.
+                        And yet, some of the most fundamental questions remain unanswered!
+                    </p>
+
+                    <p>
+                        What can quantum systems actually do?
+                        Where do their capabilities end?
+                        How can we verify their behavior?
+                        And perhaps most excitingly, where can quantum computing
+                        offer a meaningful advantage over classical approaches?
+                    </p>
+
+                    <p>
+                        These unanswered questions are not obstacles;
+                        they are opportunities waiting to be explored!
+                        At CEDAR, we embrace curiosity, creative thinking, 
+                        and collaboration as we work toward
+                        a deeper understanding of quantum systems
+                        and their potential applications.
+                    </p>
+
+                    <p>
+                        Whether you're a student, researcher, or simply someone
+                        who gets excited about asking big questions,
+                        I'd love to hear from you!
+
+                        Check out our
+                        <a href="opportunities.html">open opportunities</a>,
+                        and please don't hesitate to reach out.
+                    </p>
+
+                    <p>
+                        Let's explore, question, and discover together!
+                    </p>
+
+                    <p>
+                        <strong>— Sarah</strong>
+                    </p>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+        <div class="wrap">
+
+            <div class="footer-grid">
+
+                <!-- Laboratory Information -->
+                <div>
+
+                    <div class="footer-mark">
+
+                        <img
+                            src="assets/img/cedar-mark.svg"
+                            alt=""
+                        >
+
+                        <div>
+                            <h3>CEDAR Quantum Lab</h3>
+
+                            <small>
+                                Computation for Engineering, Dynamics,
+                                Algorithms &amp; Research in Quantum Systems
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Footer Navigation -->
+                <div>
+
+                    <h3>Navigate</h3>
+
+                    <a href="research.html">Research</a>
+                    <br>
+
+                    <a href="opportunities.html">Opportunities</a>
+
+                </div>
+
+
+                <!-- Contact Information -->
+                <div>
+
+                    <h3>Connect</h3>
+
+                    <a href="mailto:sschehade@uh.edu">
+                        Email Sarah
+                    </a>
+                    <br>
+
+                    <a
+                        href="https://scholar.google.com/citations?hl=en&amp;oi=ao&amp;user=eB170XEAAAAJ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Scholar
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                © <span data-year></span>
+                Sarah Chehade · CEDAR Quantum Lab.
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

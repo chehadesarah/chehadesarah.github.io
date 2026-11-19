@@ -1,219 +1,1135 @@
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html><head>
-		<title>Sarah Chehade's website</title> <!-- This is the title of the website tab -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="main.css">
-		<!-- MathJax v3 -->
-			<script>
-			window.MathJax = {
-			tex: {
-				inlineMath: [['$', '$'], ['\\(', '\\)']],   // allow $...$ or \( ... \)
-				displayMath: [['\\[','\\]'], ['\\begin{equation}','\\end{equation}']]
-			}
-			};
-			</script>
-			<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-	</head>
-	
-	<body class="">
+<head>
+    <meta charset="utf-8">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar" style="width:180px;height:180px;">
-						<img src="quantum.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-					</span>
-				</header>
-				<nav id="nav">
-					<ul>
-                        <!-- go to other pages (no 'scrolly' class) -->
-						<li><a href="index.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About</a></li>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-						<!-- stays on this page -->
-						<li><a href="#research" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Research</a></li>
+    <meta
+        name="description"
+        content="Research directions at CEDAR Quantum Lab."
+    >
 
-						<!-- go to other pages (no 'scrolly' class) -->
-						<li><a href="quantum_resources.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Quantum Resources</a></li>
-						<li><a href="professional_involvement.html" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Professional Involvement</a></li>
+    <title>Research | CEDAR Quantum Lab</title>
 
-						<!-- still on this page; fix the anchor to match id="seven" -->
-						<li><a href="#contact" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
-					</ul>
-				</nav>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
+    <link rel="icon" href="assets/img/cedar-mark.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
 
+<body>
 
-						<!-- One -->
-							<section id="research" class="">
-								<div class="image main" data-position="center">
-									<img src="banner.png" alt="">
-								</div>
-								<div class="container">
-									<header class="major">
-										<h3>Research</h3>
-										<p>"If you think you understand quantum mechanics, you don't understand quantum mechanics." - Richard Feynman</p> <!-- make smaller-->	
-									</header>
-									<p>My research interests combines mathematics and quantum information to build verifiable quantum protocols and practical algorithms for near-term quantum devices. A key theme used throughout is uncovering and exploiting the (algebraic) structures, Cartan decompositions, and invariants to certify quantum behavior and optimize resources.</p>
-									<h1>Non-local games</h1>
-									<p>Non-local games (NLGs) are games between a finite number of players and a referee, where separated players answer questions without communicating. The win rate reveals whether their correlations are genuinely quantum. They're often used to certify entanglement and measurements in a device-independent way. Such an appliation is often called "self-testing," and are used as primitives for verification and cryptographic protocols. Some of the key challenges related to NLGs are scaling to larger games, noise-robusness, and determining which framework properly describes our universise. My work specifically focuses on developing algorithms to play NLGs and embedding a finite number of games into larger spaces, where qubit reductions are possible.</p>
-									<table>
-										<thead>
-											<tr>
-												<th>Summary</th>	
-												<th>Publication</th>
-												<th>Pre-print</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Play NLGs on several hardware platforms</td>
-												<td><a href="https://iopscience.iop.org/article/10.1088/2058-9565/adf1c0/meta">Application-level benchmarking of quantum computers using nonlocal game strategies</a></td>
-												<td><a href="https://arxiv.org/abs/2311.01363">arXiv</a></td>
-											</tr>
-											<tr>
-												<td>Construct a variational quantum algorithm to play a NLG</td>
-												<td>Pending: A Game-Theoretic Quantum Algorithm for Solving Magic Squares</td>
-												<td><a href="https://arxiv.org/abs/2505.13366">arXiv</a></td>
-											</tr>	
-											<tr>
-												<td>Play parallel NLGs and reduce necessary qubits to do so</td>
-												<td>Pending: Commuting Embeddings for Parallel Strategies in Non-local Games</td>
-												<td><a href="https://arxiv.org/abs/2510.16214">arXiv</a></td>
-											</tr>										
-										</tbody>
-									</table>
-									<p> </p>
-									<h1>Trotterization</h1>
-									<p>Trotterization (also known as Lie-Trotter/Suzuki products) is technique used to break down hard operator evolutions like $e^{t(A+B)}$ into products like $(e^{tA/n}e^{tB/n})^n$. The latter is simuable on (most) quantum hardware using native gates. Some of the main challenges are depth-accuracy tradeoffs, sensitivity to non-commutativity, and hardware constraints. My work develops structure-aware trotterization using Jordan products and Jordan algebras, which are commutative (and generally non=associative) operator structures.</p>
-									<table>
-										<thead>
-											<tr>
-												<th>Summary</th>	
-												<th>Publication</th>
-												<th>Pre-print</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Second-order Trotter formula and error estimates in Jordan-Banach algebras</td>
-												<td><a href="https://www.sciencedirect.com/science/article/pii/S0024379525004458">Error Estimates and Higher Order Trotter Product Formulas in Jordan-Banach Algebras</a></td>
-												<td><a href="https://arxiv.org/abs/2412.20604">arXiv</a></td>
-											</tr>
-											<tr>
-												<td>A “semicoherent” framework linking exact symmetries to ε-approximate quantum processes</td>
-												<td><a href="https://pubs.aip.org/avs/aqs/article-abstract/6/3/033805/3310150/Semicoherent-symmetric-quantum-processes-Theory?redirectedFrom=fulltext">Semicoherent symmetric quantum processes: Theory and applications</a></td>
-												<td><a href="https://arxiv.org/pdf/2403.05470">arXiv</a></td>
-											</tr>	
-											<tr>
-												<td>Prove Suzuki-type approximations and error estimates for exponentiated sums in a JB-algebra setting</td>
-												<td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0024379523003786">Suzuki Type Estimates for Exponentiated Sums and Generalized Lie-Trotter Formulas in JB-Algebras</a></td>
-												<td><a href="https://arxiv.org/abs/2306.13168">arXiv</a></td>
-											</tr>										
-										</tbody>
-									</table>
-									<h1>Expressiveness of quantum circuits</h1>
-									<p>Quantum expressiveness quantifies how well a parameterized quantum model (circuit) can span the set of quantum states (unitaries). This is often done by using frame potentials, where values using the Haar measure indicate broader coverage of state (unitary) space. Some key challenges related to quantum expressiveness are that frame potentials are too expensive to estimate and that expressiveness often depends on the circuit architecture, making a uniform theory difficult to develop.</p>
-									<table>
-										<thead>
-											<tr>
-												<th>Summary</th>	
-												<th>Publication</th>
-												<th>Pre-print</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Connecting frame potentials, quantum expectations, and pairwise fidelities to characteristic functions of random variables</td>
-												<td><a href="https://ieeexplore.ieee.org/abstract/document/10738429">Expressiveness of Commutative Quantum Circuits: A Probabilistic Approach</a></td>
-												<td><a href="https://arxiv.org/abs/2404.19727">arXiv</a></td>
-											</tr>
-											<tr>
-												<td>More coming!</td>
-											</tr>									
-										</tbody>
-									</table>
-									<h1>The role of entropy</h1>
-									<p>Quantum entropies quantify uncertainty, correlations, and resources in quantum systems. Making them practical on real devices is tricky due to the nonlinearity of some of the entropic functions. </p>
-									<table>
-										<thead>
-											<tr>
-												<th>Summary</th>	
-												<th>Publication</th>
-												<th>Pre-print</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Outline theoretical security standards for quantum-classical interfaces (connections) </td>
-												<td><a href="https://www.mdpi.com/1099-4300/27/5/517">Entropy of the Quantum–Classical Interface: A Potential Metric for Security</a></td>
-												<td>No pre-print</td>
-											</tr>
-											<tr>
-												<td> A survey of (classical) data compression algorithms in the context of edge computing and emerging quantum compression techniques</td>
-												<td><a href="https://link.springer.com/article/10.1007/s00607-023-01154-0">Classical and quantum compression for edge computing: the ubiquitous data dimensionality reduction</a></td>
-												<td>No pre-print</td>
-											</tr>			
-											<tr>
-												<td>A survey of several entropic measures in quantum information and their core mathematical properties</td>
-												<td><a href="http://www.scholarpedia.org/article/Quantum_entropies">Quantum entropies</a></td>
-												<td>No pre-print</td>
-											</tr>						
-										</tbody>
-									</table>
-								</div>
-							</section>
+    <!-- ==========================================================
+         01. NAVIGATION
+    ========================================================== -->
+
+    <header class="nav">
+        <div class="wrap nav-inner">
+
+            <!-- Logo and Lab Name -->
+            <a class="brand" href="index.html">
+
+                <img
+                    src="assets/img/cedar-mark.svg"
+                    alt="CEDAR Quantum Lab mark"
+                >
+
+                <span>
+                    CEDAR Quantum Lab
+
+                    <small>
+                        Computation · Engineering · Dynamics · Algorithms · Research
+                    </small>
+                </span>
+
+            </a>
+
+
+            <!-- Mobile Navigation Button -->
+            <button class="toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+
+            <!-- Navigation Links -->
+            <nav class="menu">
+
+                <a href="index.html">Home</a>
+                <a class="active" href="research.html">Research</a>
+                <a href="people.html">People</a>
+                <a href="publications.html" hidden>Publications</a>
+                <a href="service.html" hidden>Outreach</a>
+                <a class="join" href="opportunities.html">Join us</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ==========================================================
+         02. MAIN CONTENT
+    ========================================================== -->
+
+    <main>
+
+        <!-- ======================================================
+             PAGE HEADER
+        ====================================================== -->
+
+        <section class="page-hero">
+            <div class="wrap">
+
+                <div class="eyebrow">
+                    Research
+                </div>
+
+                <h1>
+                    Structure first.
+                </h1>
+
+                <p>
+                    Our research investigates mathematical structure that deepens our
+                    understanding of quantum systems, reveals their
+                    capabilities and limitations, reduces complexity,
+                    improves verification, and guides quantum-system design.
+                </p>
+
+
+                <!-- Google Scholar Button -->
+                <div class="actions">
+
+                    <a
+                        class="button primary"
+                        href="https://scholar.google.com/citations?user=eB170XEAAAAJ&amp;hl=en&amp;oi=ao"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Scholar
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
 
 
 
-							<section id="contact" class="inactive">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍۢ “Indeed, We created all things with precise measure.”— Surah al-Qamar (54:49)</p>
-									<ul style="list-style-type:none">
-									  <li><b>Email:</b> sarah-chehade at utc dot edu</li>
-									  <li><b>Website last updated:</b> October 2025</li>
-									  <li><b>Social Media:</b> <a href="https://www.linkedin.com/in/chehade-sarah/">LinkedIn</a> </li>
-									  <li><b>Publications:</b> <a href="https://scholar.google.com/citations?user=eB170XEAAAAJ&hl=en&oi=ao">Google Scholar</a> </li>
-									</ul>
-								</div>
-							</section>
+        <!-- ======================================================
+             03. CURRENT RESEARCH THRUSTS
+        ====================================================== -->
+
+        <section id="current-research">
+            <div class="wrap">
+
+                <!-- Section Introduction -->
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        Current Research
+                    </div>
+
+                    <h2>
+                        Current Research Thrusts
+                    </h2>
+
+                    <p>
+                        CEDAR develops mathematical, computational, and
+                        engineering methods for understanding, verifying,
+                        and evaluating quantum systems.
+
+                        Our research spans foundational quantum information,
+                        emerging quantum architectures, algorithmic
+                        benchmarking, and the broader engineering
+                        implications of quantum technologies.
+                    </p>
+
+                </div>
+
+
+                <!-- Research Thrusts -->
+                <div class="pillars">
+
+
+                    <!-- ==================================================
+                         RESEARCH THRUST 01
+                         HYBRID QUANTUM SYSTEMS
+                    ================================================== -->
+
+                    <article class="pillar" id="hybrid">
+
+                        <!-- Research Category -->
+                        <div>
+
+                            <div class="tag">
+                                Research thrust 01
+                            </div>
+
+                        </div>
+
+
+                        <!-- Research Description -->
+                        <div>
+
+                            <h2>
+                                Hybrid Quantum Systems:
+                                Verification &amp; Certification
+                            </h2>
+
+                            <p>
+                                Hybrid quantum systems combine
+                                discrete-variable and continuous-variable
+                                degrees of freedom, creating new
+                                opportunities for quantum information
+                                processing while introducing challenges
+                                in verification and resource characterization.
+
+                                In this thrust, we investigate mathematical and
+                                operational frameworks for certifying
+                                hybrid quantum behavior, identifying
+                                computational resources, and establishing
+                                meaningful benchmarks across different
+                                quantum architectures.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">hybrid CV-DV systems</span>
+                                <span class="topic">quantum verification</span>
+                                <span class="topic">resource certification</span>
+                                <span class="topic">nonlocal games</span>
+                                <span class="topic">quantum benchmarking</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    How can hybrid quantum behavior be
+                                    distinguished from restricted
+                                    non-hybrid operations?
+                                </li>
+
+                                <li>
+                                    Which operational witnesses can certify
+                                    resources arising from interactions
+                                    between continuous-variable and
+                                    discrete-variable subsystems?
+                                </li>
+
+                                <li>
+                                    How should energy, accessible state
+                                    space, and experimental constraints
+                                    enter the benchmarking of hybrid
+                                    quantum systems?
+                                </li>
+
+                            </ul>
+
+                        <div hidden>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+
+                                <li>
+                                    <a
+                                        href="https://doi.org/10.3390/e27050517"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Entropy of the Quantum–Classical Interface:
+                                        A Potential Metric for Security (2025)
+                                    </a>
+                                    — related verification and interface foundations.
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="https://doi.org/10.1007/s11128-026-05194-1"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Commuting Embeddings for Parallel Strategies
+                                        in Non-local Games (2026)
+                                    </a>
+                                    — related game-based certification methods.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        </div>
+
+                    </article>
 
 
 
-					</div>
+                    <!-- ==================================================
+                         RESEARCH THRUST 02
+                         QUANTUM RESOURCE THEORIES
+                    ================================================== -->
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+                    <article class="pillar" id="resource-theories">
 
-			</div>
+                        <!-- Research Category -->
+                        <div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script><div id="titleBar"><a href="#header" class="toggle"></a><span class="title"></span></div>
+                            <div class="tag">
+                                Research thrust 02
+                            </div>
 
-	
-</body></html>
+                        </div>
+
+
+                        <!-- Research Description -->
+                        <div>
+
+                            <h2>
+                                Quantum Resource Theories
+                                &amp; Mathematical Foundations
+                            </h2>
+
+                            <p>
+                                Quantum resource theories provide a
+                                systematic framework for identifying,
+                                quantifying, and transforming properties
+                                that enable quantum information processing.
+
+                                Here, we explore algebraic and geometric
+                                approaches to resource characterization,
+                                including structure-preserving operations,
+                                resource monotones, and mathematical
+                                relationships between different resource
+                                theories.
+
+                                This direction also seeks connections
+                                between resource-theoretic methods,
+                                quantum optimization, and the capabilities
+                                and limitations of quantum algorithms.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">resource theories</span>
+                                <span class="topic">free operations</span>
+                                <span class="topic">resource monotones</span>
+                                <span class="topic">Lie algebras</span>
+                                <span class="topic">quantum optimization</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    Can different quantum resource theories
+                                    be characterized through common
+                                    algebraic or geometric structures?
+                                </li>
+
+                                <li>
+                                    Which transformations preserve,
+                                    generate, or consume useful
+                                    quantum resources?
+                                </li>
+
+                                <li>
+                                    How can resource-theoretic measures
+                                    inform quantum algorithm design,
+                                    optimization, and verification?
+                                </li>
+
+                            </ul>
+                        
+                            <div hidden>
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li>
+                                    <a href="https://arxiv.org/abs/2403.05470" target="_blank" rel="noopener noreferrer">
+                                        Semicoherent Symmetric Quantum Processes: Theory and Applications (2024)
+                                    </a> — symmetry and coherence as constrained resources.
+                                </li>
+                                <li>
+                                    <a href="https://doi.org/10.3390/e27050517" target="_blank" rel="noopener noreferrer">
+                                        Entropy of the Quantum–Classical Interface: A Potential Metric for Security (2025)
+                                    </a> — information-theoretic measures.
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                         RESEARCH THRUST 03
+                         APPLICATION-LEVEL QUANTUM BENCHMARKING
+                    ================================================== -->
+
+                    <article class="pillar" id="benchmarking">
+
+                        <!-- Research Category -->
+                        <div>
+
+                            <div class="tag">
+                                Research thrust 03
+                            </div>
+
+                        </div>
+
+
+                        <!-- Research Description -->
+                        <div>
+
+                            <h2>
+                                Application-Level Quantum Benchmarking
+                                for Engineering Systems
+                            </h2>
+
+                            <p>
+                                Understanding the practical capabilities
+                                of quantum computers requires more than
+                                evaluating individual gates or hardware
+                                performance metrics.
+
+                                We develop application-level
+                                benchmarking methods that assess
+                                quantum algorithms in the context
+                                of meaningful computational tasks.
+
+                                A particular focus is identifying
+                                problems arising in civil and
+                                environmental engineering, including
+                                infrastructure optimization, networked
+                                systems, environmental modeling,
+                                and resource allocation.
+
+                                Our goal is to establish rigorous,
+                                reproducible comparisons between
+                                quantum and classical computational
+                                approaches under realistic resource
+                                and performance constraints.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">quantum benchmarking</span>
+                                <span class="topic">civil engineering</span>
+                                <span class="topic">environmental engineering</span>
+                                <span class="topic">infrastructure optimization</span>
+                                <span class="topic">quantum algorithms</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    Which civil and environmental
+                                    engineering problems provide
+                                    meaningful test cases for
+                                    quantum algorithms?
+                                </li>
+
+                                <li>
+                                    How should quantum and classical
+                                    approaches be compared in terms
+                                    of accuracy, computational cost,
+                                    scalability, and resource consumption?
+                                </li>
+
+                                <li>
+                                    Can application-level benchmarks
+                                    identify where quantum computation
+                                    offers practical benefits or
+                                    encounters fundamental limitations?
+                                </li>
+
+                            </ul>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li>
+                                    <a href="https://doi.org/10.1088/2058-9565/adf1c0" target="_blank" rel="noopener noreferrer">
+                                        Application-level Benchmarking of Quantum Computers using Nonlocal Game Strategies (2025)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://arxiv.org/abs/2603.18323" target="_blank" rel="noopener noreferrer">
+                                        Nonlocal Games as Cross-Platform Quantum Benchmarks: Exceeding unconditional 
+                                        classical bounds on trapped-ion processors (2026)
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                         RESEARCH THRUST 04
+                         SUSTAINABLE QUANTUM COMPUTING
+                    ================================================== -->
+
+                    <article class="pillar" id="sustainability">
+
+                        <!-- Research Category -->
+                        <div>
+
+                            <div class="tag">
+                                Research thrust 04
+                            </div>
+
+                        </div>
+
+
+                        <!-- Research Description -->
+                        <div>
+
+                            <h2>
+                                Sustainable Quantum Computing
+                                &amp; Infrastructure
+                            </h2>
+
+                            <p>
+                                As quantum computing technologies
+                                advance toward larger-scale deployment,
+                                understanding their energy, environmental,
+                                and physical resource requirements
+                                becomes increasingly important.
+
+                                In this thrust, we investigate the relationship
+                                between quantum computing architectures,
+                                infrastructure requirements, and
+                                resource consumption through mathematical
+                                modeling, scenario analysis, and
+                                interdisciplinary systems research.
+
+                                This work examines energy demand,
+                                water consumption, critical materials,
+                                and the potential environmental
+                                implications of quantum-accelerated
+                                computing infrastructure.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">sustainable computing</span>
+                                <span class="topic">energy modeling</span>
+                                <span class="topic">water resources</span>
+                                <span class="topic">critical materials</span>
+                                <span class="topic">scenario analysis</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    What are the potential energy and
+                                    physical resource requirements
+                                    of large-scale quantum computing?
+                                </li>
+
+                                <li>
+                                    How do quantum hardware architectures
+                                    and deployment scenarios influence
+                                    electricity, water, and critical
+                                    material demands?
+                                </li>
+
+                                <li>
+                                    How can environmental and
+                                    infrastructure constraints
+                                    inform the sustainable development
+                                    of quantum technologies?
+                                </li>
+
+                            </ul>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li>
+                                    <a href="https://doi.org/10.1038/s44359-026-00156-3" target="_blank" rel="noopener noreferrer">
+                                        Energy and Physical Resource Impacts of Quantum Computing Merit Greater Attention (2026)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://doi.org/10.1016/j.rset.2026.100140" target="_blank" rel="noopener noreferrer">
+                                        Uncertain Quantum Computing Futures and Potential Energy and Physical Resource Impacts at Scale (2026)
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                         RESEARCH THRUST 05
+                         QUANTUM MACHINE LEARNING
+                    ================================================== -->
+
+                    <article class="pillar" id="qml">
+
+                        <!-- Research Category -->
+                        <div>
+
+                            <div class="tag">
+                                Research thrust 05
+                            </div>
+
+                        </div>
+
+
+                        <!-- Research Description -->
+                        <div>
+
+                            <h2>
+                                Quantum Machine Learning
+                                &amp; Statistical Verification
+                            </h2>
+
+                            <p>
+                                Quantum machine learning explores
+                                how quantum information processing
+                                can support learning, inference,
+                                and computational decision-making.
+
+                                We investigate the mathematical
+                                foundations of parameterized quantum
+                                models, including their expressivity,
+                                trainability, and limitations.
+
+                                Related research develops
+                                statistical-learning approaches for
+                                characterizing quantum states,
+                                verifying approximate quantum designs,
+                                and extracting meaningful information
+                                from quantum measurements.
+
+                                We emphasize interpretable models,
+                                rigorous analysis, and meaningful
+                                comparisons with classical methods.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">quantum machine learning</span>
+                                <span class="topic">circuit expressivity</span>
+                                <span class="topic">variational algorithms</span>
+                                <span class="topic">quantum k-designs</span>
+                                <span class="topic">statistical learning</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    How does quantum circuit structure
+                                    influence model expressivity
+                                    and trainability?
+                                </li>
+
+                                <li>
+                                    Can statistical learning reduce
+                                    the measurement resources needed
+                                    to verify quantum states
+                                    and randomized ensembles?
+                                </li>
+
+                                <li>
+                                    Under what conditions can quantum
+                                    learning methods provide meaningful
+                                    advantages over classical approaches?
+                                </li>
+
+                            </ul>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li>
+                                    <a href="https://doi.org/10.1103/16yg-xqtd" target="_blank" rel="noopener noreferrer">
+                                        Statistical Learning on Randomized Data to Verify Quantum State Approximate k-Designs (2026)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://doi.org/10.1109/TQE.2024.3488518" target="_blank" rel="noopener noreferrer">
+                                        Expressiveness of Commutative Quantum Circuits: A Probabilistic Approach (2024)
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ======================================================
+             04. PREVIOUS & CONTINUING RESEARCH DIRECTIONS
+        ====================================================== -->
+
+        <section id="previous-research">
+            <div class="wrap">
+
+                <!-- Section Introduction -->
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        Previous Research
+                    </div>
+
+                    <h2>
+                        Previous &amp; Continuing Research Directions
+                    </h2>
+
+                    <p>
+                        In addition to our current research priorities,
+                        We maintain an interest in foundational
+                        problems that have shaped our earlier work.
+
+                        These directions remain open for further
+                        investigation, particularly through student-led
+                        projects and interdisciplinary collaborations.
+
+                        We welcome inquiries from researchers interested
+                        in extending these ideas or exploring connections
+                        to our current research program.
+                    </p>
+
+                </div>
+
+
+                <!-- Previous Research Thrusts -->
+                <div class="pillars">
+
+
+                    <!-- ==================================================
+                         PREVIOUS THRUST 01
+                         QUANTUM GAMES & VERIFICATION
+                    ================================================== -->
+
+                    <article class="pillar" id="games">
+
+                        <div>
+
+                            <div class="tag">
+                                Previous thrust 01
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Quantum Games &amp; Verification
+                            </h2>
+
+                            <p>
+                                Nonlocal games provide operational tests
+                                of quantum correlations and a natural
+                                framework for studying verification,
+                                nonlocality, and quantum computational
+                                strategies.
+
+                                Our earlier work investigated algebraic
+                                constructions, variational algorithms,
+                                and efficient representations of
+                                strategies for nonlocal games.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">nonlocal games</span>
+                                <span class="topic">self-testing</span>
+                                <span class="topic">variational algorithms</span>
+                                <span class="topic">entanglement</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    How can algebraic structure reduce
+                                    the cost of constructing quantum
+                                    strategies?
+                                </li>
+
+                                <li>
+                                    Which game families can be embedded,
+                                    parallelized, or compressed without
+                                    losing useful quantum behavior?
+                                </li>
+
+                                <li>
+                                    How can nonlocal games serve as
+                                    application-level tests of
+                                    quantum hardware?
+                                </li>
+
+                            </ul>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li><a href="https://doi.org/10.1109/QCE65121.2025.00264" target="_blank" rel="noopener noreferrer">A Game-Theoretic Quantum Algorithm for Solving Magic Squares (2025)</a></li>
+                                <li><a href="https://doi.org/10.1007/s11128-026-05194-1" target="_blank" rel="noopener noreferrer">Commuting Embeddings for Parallel Strategies in Non-local Games (2026)</a></li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                         PREVIOUS THRUST 02
+                         STRUCTURE-AWARE QUANTUM DYNAMICS
+                    ================================================== -->
+
+                    <article class="pillar" id="dynamics">
+
+                        <div>
+
+                            <div class="tag">
+                                Previous thrust 02
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Structure-Aware Quantum Dynamics
+                            </h2>
+
+                            <p>
+                                Approximating operator evolution is
+                                fundamental to quantum simulation
+                                and control.
+
+                                Our research investigates Trotter
+                                and Suzuki-type constructions in
+                                settings where noncommutative or
+                                Jordan-algebraic structure can be
+                                explicitly exploited.
+
+                                This direction emphasizes rigorous
+                                error analysis, algebraic structure,
+                                symmetry, and efficient approximations
+                                of quantum evolution.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">Trotterization</span>
+                                <span class="topic">Jordan algebras</span>
+                                <span class="topic">operator theory</span>
+                                <span class="topic">symmetry</span>
+                                <span class="topic">quantum control</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    Which symmetries and algebraic
+                                    decompositions control
+                                    approximation error?
+                                </li>
+
+                                <li>
+                                    How do exact and approximate
+                                    symmetries interact in
+                                    quantum processes?
+                                </li>
+
+                                <li>
+                                    Can mathematical structure suggest
+                                    lower-depth realizations of
+                                    useful quantum evolutions?
+                                </li>
+
+                            </ul>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li><a href="https://arxiv.org/abs/2412.20604" target="_blank" rel="noopener noreferrer">Error Estimates and Higher Order Trotter Product Formulas in Jordan-Banach Algebras (2026)</a></li>
+                                <li><a href="https://arxiv.org/abs/2306.13168" target="_blank" rel="noopener noreferrer">Suzuki Type Estimates for Exponentiated Sums and Generalized Lie-Trotter Formulas in JB-Algebras (2024)</a></li>
+                                <li><a href="https://arxiv.org/abs/2403.05470" target="_blank" rel="noopener noreferrer">Semicoherent Symmetric Quantum Processes: Theory and Applications (2024)</a></li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                         PREVIOUS THRUST 03
+                         QUANTUM CIRCUITS, GRAPHS & EXPRESSIVITY
+                    ================================================== -->
+
+                    <article class="pillar" id="expressivity">
+
+                        <div>
+
+                            <div class="tag">
+                                Previous thrust 03
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Quantum Circuits, Graphs
+                                &amp; Expressivity
+                            </h2>
+
+                            <p>
+                                Rather than treating parameterized
+                                quantum circuits as black boxes,
+                                this research examines how circuit
+                                architecture determines their
+                                representational capabilities.
+
+                                Directions include probabilistic
+                                characterizations of expressivity,
+                                Lie-algebraic closures, commutants,
+                                graph neighborhoods, local invariants,
+                                and structural equivalence across
+                                quantum architectures.
+
+                                Particular attention is given to
+                                periodic and aperiodic interaction
+                                graphs and the relationship between
+                                local structure and global
+                                algebraic behavior.
+                            </p>
+
+
+                            <!-- Research Topics -->
+                            <div class="topics">
+
+                                <span class="topic">expressivity</span>
+                                <span class="topic">Lie algebras</span>
+                                <span class="topic">graph invariants</span>
+                                <span class="topic">commutants</span>
+                                <span class="topic">aperiodic systems</span>
+
+                            </div>
+
+
+                            <!-- Research Questions -->
+                            <h3>
+                                Questions we ask
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    Which local graph features
+                                    predict global algebraic
+                                    behavior?
+                                </li>
+
+                                <li>
+                                    When do different interaction
+                                    geometries generate equivalent
+                                    quantum dynamics?
+                                </li>
+
+                                <li>
+                                    How can quantum circuit
+                                    expressivity be characterized
+                                    without prohibitively
+                                    expensive sampling?
+                                </li>
+
+                            </ul>
+
+                            <h3>Relevant Works</h3>
+
+                            <ul class="relevant-works">
+                                <li><a href="https://arxiv.org/abs/2609.14209" target="_blank" rel="noopener noreferrer">Pauli Supported Invariants for Periodic Graphs-Derived Hamiltonians (2026, preprint)</a></li>
+                                <li><a href="https://doi.org/10.1109/TQE.2024.3488518" target="_blank" rel="noopener noreferrer">Expressiveness of Commutative Quantum Circuits: A Probabilistic Approach (2024)</a></li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================================
+         05. FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+        <div class="wrap">
+
+            <div class="footer-grid">
+
+
+                <!-- Laboratory Information -->
+                <div>
+
+                    <div class="footer-mark">
+
+                        <img
+                            src="assets/img/cedar-mark.svg"
+                            alt=""
+                        >
+
+                        <div>
+
+                            <h3>
+                                CEDAR Quantum Lab
+                            </h3>
+
+                            <small>
+                                Computation for Engineering, Dynamics, Algorithms
+                                &amp; Research in Quantum Systems
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Footer Navigation -->
+                <div>
+
+                    <h3>Navigate</h3>
+
+                    <a href="research.html">Research</a>
+                    <br>
+
+                    <a href="opportunities.html">Opportunities</a>
+
+                </div>
+
+
+                <!-- Contact Links -->
+                <div>
+
+                    <a href="people.html">
+                        Meet us
+                    </a>
+
+                    <br>
+
+                    <a href="mailto:sschehade@uh.edu">
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+
+                © <span data-year></span>
+                Sarah Chehade · CEDAR Quantum Lab.
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- ==========================================================
+         06. JAVASCRIPT
+    ========================================================== -->
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
