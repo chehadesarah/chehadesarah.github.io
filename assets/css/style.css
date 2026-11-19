@@ -1134,3 +1134,38 @@ section {
     .actions .button { flex-basis: 100%; }
 }
 
+
+
+/* ==========================================================
+   21. HOMEPAGE-ONLY RESPONSIVE CORRECTIONS
+   Leaves research, people, and other inner pages unchanged.
+========================================================== */
+
+/* The homepage hero contains a long, unbreakable tagline. */
+.hero-grid > * { min-width: 0; }
+.hero-tagline { overflow-wrap: break-word; }
+
+@media (max-width: 1100px) {
+    .hero-tagline { white-space: normal; }
+}
+
+@media (max-width: 850px) {
+    /* Prevent the philosophy statement from widening the viewport. */
+    .hero-grid { grid-template-columns: minmax(0, 1fr); }
+    .dark .quote { max-width: 100%; overflow-wrap: break-word; }
+    .dark .quote span[style*="white-space"] {
+        white-space: normal !important;
+    }
+    .hero-tagline { max-width: 100%; }
+}
+
+@media (max-width: 520px) {
+    .hero .wrap { width: calc(100% - 36px); }
+    .hero h1 { font-size: clamp(2.8rem, 13vw, 4rem); }
+    .hero h1 span { line-height: 1.1; }
+    .hero-tagline { font-size: 0.7rem; line-height: 1.55; letter-spacing: 0.05em; }
+    .hero-mark { width: min(175px, 55vw); }
+    .dark .quote { font-size: clamp(1.45rem, 6vw, 2rem); }
+    .hero .actions .button { min-width: 0; }
+    .hero .lede { overflow-wrap: break-word; }
+}
